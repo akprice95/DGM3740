@@ -113,7 +113,9 @@ header {
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    position: relative; }
+    position: relative;
+    padding-left: 3px;
+    padding-top: 3px; }
   header h1 {
     font-size: 2rem;
     color: #fff;
@@ -146,7 +148,9 @@ nav {
   background: linear-gradient(to bottom, #324b4d 0%, #0a0f0f 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$variable1', endColorstr='$variable2', GradientType=0);
-  /* IE6-9 */ }
+  /* IE6-9 */
+  /* hide the navigation button for all screen widths. We will show it below just for small screens */
+  /* End Mobile Styles */ }
   nav div {
     overflow: hidden;
     max-width: 1200px;
@@ -166,23 +170,92 @@ nav {
     nav div a:last-child {
       border-right: none; }
   nav ul {
-    float: left; }
-  nav #thisNav li {
     float: left;
     width: 100%; }
-    nav #thisNav li a {
-      float: left;
-      width: 100%; }
-    nav #thisNav li ul.subNav {
-      margin-left: 20px;
-      clear: both;
-      float: left; }
-      nav #thisNav li ul.subNav li {
-        float: left; }
+  nav * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  nav #hamburgerBtn {
+    display: none; }
+  @media only screen and (max-width: 60rem) {
+    nav {
+      /* Pushes the body tag down to make room for the navigation bar at the top of the page */ }
+      nav body {
+        padding-top: 2.75rem; }
+      nav nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2.75rem;
+        background-color: #56f; }
+      nav #hamburgerBtn {
+        display: block;
+        width: 7rem;
+        height: 2.75rem;
+        background: none;
+        color: rgba(255, 255, 255, 0.9);
+        border: 0 none;
+        font-size: 1.3rem;
+        font-weight: normal;
+        text-align: left; }
+        nav #hamburgerBtn i {
+          font-size: 2rem;
+          font-style: normal; }
+      nav #hamburgerBtn.open span:nth-child(1) {
+        display: none; }
+      nav #hamburgerBtn.open span:nth-child(2) {
+        display: block; }
+      nav #hamburgerBtn span:nth-child(1) {
+        display: block; }
+      nav #hamburgerBtn span:nth-child(2) {
+        display: none; }
+      nav #primaryNav {
+        height: 0;
+        overflow: hidden;
+        width: 20rem;
+        background-color: #56f;
+        margin: 0;
+        padding: 0;
+        z-index: 998;
+        font-family: Verdana;
+        font-weight: normal; }
+      nav #primaryNav li.current-menu-item a {
+        background-color: rgba(0, 0, 0, 0.25); }
+      nav #primaryNav li a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 2vw;
+        font-size: 14px;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.15);
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.2); }
+      nav #primaryNav li a:hover {
+        background-color: rgba(0, 0, 0, 0.5); }
+      nav #primaryNav.open {
+        height: auto; }
+      nav #primaryNav li.parent > a::after {
+        font-size: 0.75rem;
+        content: "\25BC";
+        color: rgba(255, 255, 255, 0.5);
+        float: right; }
+      nav #primaryNav li ul {
+        display: none;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 0;
+        margin: 0; }
+      nav #primaryNav li ul a {
+        padding-left: 20px; }
+      nav #primaryNav li:hover ul {
+        display: block; } }
   nav .search-container {
     width: 100%;
     float: none;
-    display: block; }
+    display: block;
+    background-color: white;
+    border: 1px; }
   nav .search-container input {
     width: 80%;
     padding: 5px; }

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Cabot Cruises</title>
+    <title>NASA Crusie</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
@@ -29,34 +29,30 @@
             Images/logo300.png 3x
           "
         />
-        <h1>Cabot Cruises</h1>
-        <h2>Take A Trip in Space</h2>
         <a id="phone" href="tel:1-800-555-1234">1-800-555-1234</a>
       </div>
     </header>
+    <!-- NAVIGATION HERE -->
     <nav class="clearfix">
-      <div class="topnav" id="myTopnav">
-        <i class="fa fa-bars" aria-hidden="true" onclick="test()"></i>
-        <ul class="" id="thisNav">
-          <li><a class="active" href="">Home</a></li>
-          <li><a href="#">Cruises</a></li>
-          <li>
-            <a href="#">Agents</a>
-            <ul class="subNav">
-              <li>
-                <a href="">Jane</a>
-                <a href="">Bobby Boy</a>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#">Book</a></li>
-        </ul>
-
-        <div class="search-container">
-          <input type="search" placeholder="Search..." />
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
+      <div class="search-container">
+        <input type="search" placeholder="Search..." />
+        <button type="submit"><i class="fa fa-search"></i></button>
       </div>
+      <button id="hamburgerBtn">
+        <span><i>&equiv;</i>OPEN</span> <span><i>&otimes;</i>CLOSE</span>
+      </button>
+      <ul id="primaryNav">
+        <li><a href="#">Home</a></li>
+        <li class="current-menu-item"><a href="#">Cruise</a></li>
+        <li class="parent">
+          <a href="#">Agents</a>
+          <ul>
+            <li><a href="#">Booby</a></li>
+            <li><a href="#">Joe</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Books</a></li>
+      </ul>
     </nav>
 
     <!-- Start Slide -->

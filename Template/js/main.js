@@ -1,22 +1,9 @@
-function test() {
-  const nav = document.getElementById("thisNav");
-  nav.classList.toggle("hidden");
+//Create a button and give it an ID of "hamburgerBtn"
+//Attach an ID of "primaryNav" to the UL of the unordered list that holds your links
+
+function toggleMenu() {
+  document.getElementById("hamburgerBtn").classList.toggle("open");
+  document.getElementById("primaryNav").classList.toggle("open");
 }
-function resize() {
-  if (window.outerWidth <= 559) {
-    let element = document.querySelector("#thisNav");
-    element.classList.add("hidden");
-  }
-  if (window.outerWidth > 559) {
-    const nav = document.getElementById("thisNav");
-    nav.classList.remove("hidden");
-  }
-}
-if (window.outerWidth <= 559) {
-  let element = document.querySelector("#thisNav");
-  element.classList.add("hidden");
-}
-if (window.outerWidth > 559) {
-  const nav = document.getElementById("thisNav");
-  nav.classList.remove("hidden");
-}
+var x = document.getElementById("hamburgerBtn");
+x.onclick = toggleMenu;
