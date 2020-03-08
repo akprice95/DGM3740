@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$font-stack".
-        on line 16 of /Users/aaronprice/Desktop/DGM3740/Template/SCSS/small.scss
+Error: Undefined variable: "$boldWeight".
+        on line 20 of /Users/aaronprice/Desktop/DGM3740/Template/SCSS/small.scss
 
-11:   box-sizing: border-box;
-12: }
-13: 
-14: body {
 15:   font-size: 1rem;
-16:   font-family: $font-stack;
-17: }
-18: 
-19: /*  Header  *\/
-20: header {
-21:   font-weight: $boldWeight;
+16: }
+17: 
+18: /*  Header  *\/
+19: header {
+20:   font-weight: $boldWeight;
+21:   max-width: 100%;
+22:   margin: 0 auto;
+23:   height: 100px;
+24:   background-color: $primary-color;
+25: 
 
 Backtrace:
-/Users/aaronprice/Desktop/DGM3740/Template/SCSS/small.scss:16
+/Users/aaronprice/Desktop/DGM3740/Template/SCSS/small.scss:20
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -62,4 +62,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$font-stack\".\A         on line 16 of /Users/aaronprice/Desktop/DGM3740/Template/SCSS/small.scss\A \A 11:   box-sizing: border-box;\A 12: }\A 13: \A 14: body {\A 15:   font-size: 1rem;\A 16:   font-family: $font-stack;\A 17: }\A 18: \A 19: /*  Header  */\A 20: header {\A 21:   font-weight: $boldWeight;"; }
+  content: "Error: Undefined variable: \"$boldWeight\".\A         on line 20 of /Users/aaronprice/Desktop/DGM3740/Template/SCSS/small.scss\A \A 15:   font-size: 1rem;\A 16: }\A 17: \A 18: /*  Header  */\A 19: header {\A 20:   font-weight: $boldWeight;\A 21:   max-width: 100%;\A 22:   margin: 0 auto;\A 23:   height: 100px;\A 24:   background-color: $primary-color;\A 25: "; }

@@ -98,8 +98,7 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-size: 1rem;
-  font-family: "Courier", serif; }
+  font-size: 1rem; }
 
 /*  Header  */
 header {
@@ -189,7 +188,7 @@ nav {
         left: 0;
         width: 100%;
         height: 2.75rem;
-        background-color: #56f; }
+        background-color: white; }
       nav #hamburgerBtn {
         display: block;
         width: 7rem;
@@ -215,7 +214,7 @@ nav {
         height: 0;
         overflow: hidden;
         width: 20rem;
-        background-color: #56f;
+        background-color: white;
         margin: 0;
         padding: 0;
         z-index: 998;
@@ -252,7 +251,7 @@ nav {
         display: block; } }
   nav .search-container {
     width: 100%;
-    float: none;
+    float: right;
     display: block;
     background-color: white;
     border: 1px; }
@@ -370,7 +369,11 @@ footer {
 .hidden {
   display: none; }
 
-@media only screen and (min-width: 35rem) {
+@media only screen and (min-width: 35rem) and (min-width: 35rem) {
+  header {
+    width: 100%; }
+
+  /*  ------------- NAVIGATION -------------  */
   nav div a {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     float: left; }
@@ -386,18 +389,18 @@ footer {
       width: 45px; }
   nav i.fa-bars {
     display: none; }
-  nav ul#thisNav {
+  nav ul#primaryNav {
     float: none;
     width: 500px; }
-    nav ul#thisNav li {
+    nav ul#primaryNav li {
       width: 20%;
       float: left; }
-      nav ul#thisNav li a {
+      nav ul#primaryNav li a {
         width: 100%; }
-      nav ul#thisNav li ul.subNav {
+      nav ul#primaryNav li ul.subNav {
         display: none;
-        float: none; }
-        nav ul#thisNav li ul.subNav li {
+        float: left; }
+        nav ul#primaryNav li ul.subNav li {
           float: none;
           display: block;
           position: absolute;
@@ -406,7 +409,7 @@ footer {
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           padding: 12px 16px;
           z-index: 1; }
-    nav ul#thisNav li:hover ul.subNav {
+    nav ul#primaryNav li:hover ul.subNav {
       display: block; }
 
   /*  main  */
