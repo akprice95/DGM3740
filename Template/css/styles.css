@@ -188,7 +188,7 @@ nav {
         left: 0;
         width: 100%;
         height: 2.75rem;
-        background-color: white; }
+        background-color: #94b0b2; }
       nav #hamburgerBtn {
         display: block;
         width: 7rem;
@@ -214,7 +214,7 @@ nav {
         height: 0;
         overflow: hidden;
         width: 20rem;
-        background-color: white;
+        background-color: #94b0b2;
         margin: 0;
         padding: 0;
         z-index: 998;
@@ -376,7 +376,7 @@ footer {
   /*  ------------- NAVIGATION -------------  */
   nav div a {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
-    float: left; }
+    float: right; }
   nav .search-container {
     margin-top: 10px;
     float: right;
@@ -427,8 +427,43 @@ footer {
   #why {
     width: 100%; } }
 @media only screen and (min-width: 1200px) {
-  nav a:last-child {
-    border-left: 1px solid rgba(0, 0, 0, 0.3); }
+  nav div a {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    float: right; }
+  nav .search-container {
+    margin-top: 10px;
+    float: right;
+    width: 250px; }
+    nav .search-container input {
+      width: 80%; }
+    nav .search-container button {
+      padding: 5px;
+      float: right;
+      width: 45px; }
+  nav i.fa-bars {
+    display: none; }
+  nav ul#primaryNav {
+    float: none;
+    width: 500px; }
+    nav ul#primaryNav li {
+      width: 20%;
+      float: left; }
+      nav ul#primaryNav li a {
+        width: 100%; }
+      nav ul#primaryNav li ul.subNav {
+        display: none;
+        float: left; }
+        nav ul#primaryNav li ul.subNav li {
+          float: none;
+          display: block;
+          position: absolute;
+          background-color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          padding: 12px 16px;
+          z-index: 1; }
+    nav ul#primaryNav li:hover ul.subNav {
+      display: block; }
 
   /*  main  */
   main div.thumbnails {
