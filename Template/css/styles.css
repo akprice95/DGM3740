@@ -5,18 +5,75 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com 
 Twitter: @rich_clark
 */
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,19 +85,31 @@ time, mark, audio, video {
 body {
   line-height: 1; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block; }
 
 nav ul {
   list-style: none; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none; }
 
 a {
@@ -66,7 +135,8 @@ mark {
 del {
   text-decoration: line-through; }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted;
   cursor: help; }
 
@@ -83,8 +153,10 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-input, select {
-  vertical-align: middle; }
+input,
+select {
+  vertical-align: middle;
+  width: 100%; }
 
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {
@@ -137,6 +209,7 @@ header {
 
 /*  Navigation  */
 nav {
+  max-width: 1200px;
   width: 100%;
   background: #324b4d;
   /* Old browsers */
@@ -253,7 +326,6 @@ nav {
     width: 100%;
     float: right;
     display: block;
-    background-color: white;
     border: 1px; }
   nav .search-container input {
     width: 80%;
@@ -369,101 +441,88 @@ footer {
 .hidden {
   display: none; }
 
-@media only screen and (min-width: 35rem) and (min-width: 35rem) {
+input,
+select {
+  width: 95%;
+  height: 50px;
+  border-radius: 1px;
+  margin-bottom: 10px; }
+
+.submitBtn {
+  height: 50px;
+  border-radius: 25px; }
+
+@media only screen and (min-width: 35rem) {
   header {
     width: 100%; }
 
+  div.head {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-left: 3px;
+    padding-top: 3px; }
+
   /*  ------------- NAVIGATION -------------  */
-  nav div a {
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-    float: right; }
-  nav .search-container {
-    margin-top: 10px;
-    float: right;
-    width: 250px; }
-    nav .search-container input {
-      width: 80%; }
-    nav .search-container button {
-      padding: 5px;
+  nav {
+    margin: 0 auto;
+    max-width: 1200px;
+    /*  main  */ }
+    nav a {
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
       float: right;
-      width: 45px; }
-  nav i.fa-bars {
-    display: none; }
-  nav ul#primaryNav {
-    float: none;
-    width: 500px; }
-    nav ul#primaryNav li {
-      width: 20%;
-      float: left; }
-      nav ul#primaryNav li a {
-        width: 100%; }
-      nav ul#primaryNav li ul.subNav {
-        display: none;
+      font-size: 25px;
+      text-align: center;
+      color: white; }
+    nav .search-container {
+      margin-top: 10px;
+      float: right;
+      width: 250px; }
+      nav .search-container input {
+        width: 80%; }
+      nav .search-container button {
+        padding: 5px;
+        float: right;
+        width: 45px; }
+    nav i.fa-bars {
+      display: none; }
+    nav ul#primaryNav {
+      float: none;
+      width: 500px; }
+      nav ul#primaryNav li {
+        width: 20%;
         float: left; }
-        nav ul#primaryNav li ul.subNav li {
-          float: none;
-          display: block;
-          position: absolute;
-          background-color: black;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          padding: 12px 16px;
-          z-index: 1; }
-    nav ul#primaryNav li:hover ul.subNav {
-      display: block; }
-
-  /*  main  */
-  main div.teaser {
-    width: 33%; }
-  main div.lead {
-    height: 310px; }
-
-  #contact {
-    width: 50%; }
-
-  #newsLetter {
-    width: 50%; }
-
-  #why {
-    width: 100%; } }
+        nav ul#primaryNav li a {
+          width: 100%; }
+        nav ul#primaryNav li ul.subNav {
+          display: none;
+          float: left; }
+          nav ul#primaryNav li ul.subNav li {
+            float: none;
+            display: block;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1; }
+      nav ul#primaryNav li:hover ul.subNav {
+        display: block; }
+    nav main div.teaser {
+      width: 33%; }
+    nav main div.lead {
+      height: 310px; }
+    nav #contact {
+      width: 50%; }
+    nav #newsLetter {
+      width: 50%; }
+    nav #why {
+      width: 100%; } }
 @media only screen and (min-width: 1200px) {
-  nav div a {
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-    float: right; }
-  nav .search-container {
-    margin-top: 10px;
-    float: right;
-    width: 250px; }
-    nav .search-container input {
-      width: 80%; }
-    nav .search-container button {
-      padding: 5px;
-      float: right;
-      width: 45px; }
-  nav i.fa-bars {
-    display: none; }
-  nav ul#primaryNav {
-    float: none;
-    width: 500px; }
-    nav ul#primaryNav li {
-      width: 20%;
-      float: left; }
-      nav ul#primaryNav li a {
-        width: 100%; }
-      nav ul#primaryNav li ul.subNav {
-        display: none;
-        float: left; }
-        nav ul#primaryNav li ul.subNav li {
-          float: none;
-          display: block;
-          position: absolute;
-          background-color: black;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          padding: 12px 16px;
-          z-index: 1; }
-    nav ul#primaryNav li:hover ul.subNav {
-      display: block; }
+  nav a {
+    font-size: 25px; }
 
   /*  main  */
   main div.thumbnails {
